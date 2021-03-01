@@ -31,8 +31,8 @@
   local volumeMount = $.core.v1.volumeMount,
 
   ingester_container+:: with(
-    $.util.resourcesRequests('1', '7Gi') +
-    $.util.resourcesLimits('2', '14Gi') +
+    $.util.resourcesRequests('100m', '100Mi') +
+    $.util.resourcesLimits('200m', '200Mi') +
     container.withVolumeMountsMixin([
       volumeMount.new('ingester-wal', $._config.loki.ingester.wal.dir),
     ]),

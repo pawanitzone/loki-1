@@ -60,7 +60,7 @@
     container.mixin.readinessProbe.httpGet.withPath('/ready') +
     container.mixin.readinessProbe.httpGet.withPort($._config.http_listen_port) +
     container.mixin.readinessProbe.withTimeoutSeconds(1) +
-    $.util.resourcesRequests('4', '2Gi')
+    $.util.resourcesRequests('100m', '200Mi')
   else {},
 
   compactor_statefulset: if $._config.using_boltdb_shipper then

@@ -22,8 +22,8 @@
       container.new('ruler', $._images.ruler) +
       container.withPorts($.util.defaultPorts) +
       container.withArgsMixin($.util.mapToFlags($.ruler_args)) +
-      $.util.resourcesRequests('1', '6Gi') +
-      $.util.resourcesLimits('16', '16Gi') +
+      $.util.resourcesRequests('100m', '100Mi') +
+      $.util.resourcesLimits('200m', '200Mi') +
       $.util.readinessProbe +
       $.jaeger_mixin +
       if $._config.stateful_rulers then

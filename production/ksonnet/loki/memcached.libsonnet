@@ -5,7 +5,7 @@ memcached {
   memcached_chunks: $.memcached {
     name: 'memcached',
     max_item_size: '2m',
-    memory_limit_mb: 4096,
+    memory_limit_mb: 1024,
   },
 
   // Dedicated memcached instance used to temporarily cache index lookups.
