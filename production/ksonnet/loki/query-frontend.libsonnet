@@ -17,8 +17,8 @@
     container.mixin.readinessProbe.withTimeoutSeconds(1) +
     $.jaeger_mixin +
     if $._config.queryFrontend.sharded_queries_enabled then
-      $.util.resourcesRequests('2', '2Gi') +
-      $.util.resourcesLimits(null, '6Gi') +
+      $.util.resourcesRequests('100m', '100Mi') +
+      $.util.resourcesLimits(null, '300Mi') +
       container.withEnvMap({
         JAEGER_REPORTER_MAX_QUEUE_SIZE: '5000',
       })
