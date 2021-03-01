@@ -16,7 +16,7 @@
     container.mixin.readinessProbe.withInitialDelaySeconds(15) +
     container.mixin.readinessProbe.withTimeoutSeconds(1) +
     $.util.resourcesRequests('100m', '100Mi') +
-    $.util.resourcesLimits('200', '300Mi'),
+    $.util.resourcesLimits('200m', '300Mi'),
 
   local deployment = $.apps.v1.deployment,
 
