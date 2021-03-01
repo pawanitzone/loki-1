@@ -22,8 +22,8 @@
     container.mixin.readinessProbe.httpGet.withPort($._config.http_listen_port) +
     container.mixin.readinessProbe.withInitialDelaySeconds(15) +
     container.mixin.readinessProbe.withTimeoutSeconds(1) +
-    $.util.resourcesRequests('1', '5Gi') +
-    $.util.resourcesLimits('2', '10Gi') +
+    $.util.resourcesRequests('100m', '100Mi') +
+    $.util.resourcesLimits('200', '300Mi') +
     if $._config.stateful_ingesters then
       container.withVolumeMountsMixin([
         volumeMount.new('ingester-data', '/data'),
