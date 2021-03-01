@@ -15,8 +15,8 @@
     container.mixin.readinessProbe.httpGet.withPort($._config.http_listen_port) +
     container.mixin.readinessProbe.withInitialDelaySeconds(15) +
     container.mixin.readinessProbe.withTimeoutSeconds(1) +
-    $.util.resourcesRequests('500m', '500Mi') +
-    $.util.resourcesLimits('1', '1Gi'),
+    $.util.resourcesRequests('100m', '100Mi') +
+    $.util.resourcesLimits('200', '300Mi'),
 
   local deployment = $.apps.v1.deployment,
 
