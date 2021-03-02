@@ -7,8 +7,8 @@ memcached {
     max_item_size: '2m',
     memory_limit_mb: 1024,
     memcached_container+::
-     $.util.resourcesRequests("100m", "100Mi") +
-     $.util.resourcesLimits("200m", "300Mi"),
+     $.util.resourcesRequests("50m", "100Mi") +
+     $.util.resourcesLimits("100m", "300Mi"),
     
   },
 
@@ -17,16 +17,16 @@ memcached {
     name: 'memcached-index-queries',
     max_item_size: '5m',
     memcached_container+::
-     $.util.resourcesRequests("100m", "100Mi") +
-     $.util.resourcesLimits("200m", "300Mi"),
+     $.util.resourcesRequests("50m", "100Mi") +
+     $.util.resourcesLimits("100m", "300Mi"),
   },
 
   // Dedicated memcached instance used to dedupe writes to the index.
   memcached_index_writes: $.memcached {
     name: 'memcached-index-writes',
     memcached_container+::
-     $.util.resourcesRequests("100m", "100Mi") +
-     $.util.resourcesLimits("200m", "300Mi"),
+     $.util.resourcesRequests("50m", "100Mi") +
+     $.util.resourcesLimits("100m", "300Mi"),
   },
 
   // Dedicated memcached instance used to cache query results.
@@ -34,8 +34,8 @@ memcached {
     name: 'memcached-frontend',
     max_item_size: '5m',
     memcached_container+::
-     $.util.resourcesRequests("100m", "100Mi") +
-     $.util.resourcesLimits("200m", "300Mi"),
+     $.util.resourcesRequests("50m", "100Mi") +
+     $.util.resourcesLimits("100m", "300Mi"),
   },
 }
 
