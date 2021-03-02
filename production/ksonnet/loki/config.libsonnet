@@ -286,7 +286,7 @@
       schema_config: {
         configs: [{
           from: '2020-10-24',
-          store: 'bigtable',
+          store: 'boltdb',
           object_store: 'gcs',
           schema: 'v11',
           index: {
