@@ -17,7 +17,7 @@
     container.mixin.readinessProbe.httpGet.withPort($._config.http_listen_port) +
     container.mixin.readinessProbe.withInitialDelaySeconds(15) +
     container.mixin.readinessProbe.withTimeoutSeconds(1) +
-    $.util.resourcesRequests('100m', '100Mi') +
+    $.util.resourcesRequests('50m', '100Mi') +
     if $._config.stateful_queriers then
       container.withVolumeMountsMixin([
         volumeMount.new('querier-data', '/data'),
