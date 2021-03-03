@@ -4,7 +4,7 @@ See the [Tanka Installation Docs](../../docs/sources/installation/tanka.md)
 
 Steps to perform on Linux 
 _________
-
+```
 ## Install jb 
 - go get -u github.com/jsonnet-bundler/jsonnet-bundler/cmd/jb
 or 
@@ -25,7 +25,7 @@ OR
 
 
 ###Setup to deploy loki using tank####
-```
+
 - mkdir loki
 - cd loki
 - tk init
