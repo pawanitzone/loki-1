@@ -25,7 +25,7 @@ OR
 
 
 ###Setup to deploy loki using tank####
-
+```
 - mkdir loki
 - cd loki
 - tk init
@@ -44,7 +44,7 @@ OR
 - vi lib/k.libsonnet
 #Edit and Replace 
 import 'github.com/jsonnet-libs/k8s-alpha/1.16/main.libsonnet'
-
+```
 ####
 
 - vi environments/loki/main.jsonnet
