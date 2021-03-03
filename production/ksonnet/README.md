@@ -50,6 +50,7 @@ import 'github.com/jsonnet-libs/k8s-alpha/1.16/main.libsonnet'
 - vi environments/loki/main.jsonnet
 #Add these contents (If storage is bigtable & GCS):
 -------
+```jsonnet
 local gateway = import 'loki/gateway.libsonnet';
 local loki = import 'loki/loki.libsonnet';
 local promtail = import 'promtail/promtail.libsonnet';
@@ -80,9 +81,11 @@ loki + promtail + gateway {
     consul_replicas: 1,
   },
 }
+```
 -------
 #Add these contents (If storage is dynamoDB & S3):  Note: Also change in "config.libsonnet" file for Storage_config: store: bigtable or dynamodb
 ------------
+```jsonnet
 local gateway = import 'loki/gateway.libsonnet';
 local loki = import 'loki/loki.libsonnet';
 local promtail = import 'promtail/promtail.libsonnet';
@@ -114,6 +117,7 @@ loki + promtail + gateway {
     consul_replicas: 1,
   },
 }
+```
 ------------
 #### Deploy ksonnet for Loki HA
 
