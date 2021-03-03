@@ -23,15 +23,15 @@ tk --version
 
 ###Setup to deploy loki using tank####
 
-mkdir loki
-cd loki
-tk init
-tk env add environments/loki --namespace=loki --server=https://35.238.153.150
+- mkdir loki
+- cd loki
+- tk init
+- tk env add environments/loki --namespace=loki --server=https://35.238.153.150
 
 #### 
-jb install github.com/pawanitzone/loki-1/production/ksonnet/loki
-jb install github.com/pawanitzone/loki-1/production/ksonnet/promtail
-jb install github.com/jsonnet-libs/k8s-alpha/1.16
+- jb install github.com/pawanitzone/loki-1/production/ksonnet/loki
+- jb install github.com/pawanitzone/loki-1/production/ksonnet/promtail
+- jb install github.com/jsonnet-libs/k8s-alpha/1.16
 
 ##### If above any change in repo files you would need to update jb ######
 
