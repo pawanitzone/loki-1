@@ -286,8 +286,8 @@
       schema_config: {
         configs: [{
           from: '2020-10-24',
-          store: 'boltdb',
-          object_store: 'gcs',
+          store: 'aws',
+          object_store: 'aws',
           schema: 'v11',
           index: {
             prefix: '%s_index_' % $._config.table_prefix,
