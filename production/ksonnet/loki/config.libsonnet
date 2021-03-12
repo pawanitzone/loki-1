@@ -10,7 +10,7 @@
     grpc_server_max_msg_size: 100 << 20,  // 100MB
 
     // flag for tuning things when boltdb-shipper is current or upcoming index type.
-    using_boltdb_shipper: true,
+    using_boltdb_shipper: false,
 
     wal_enabled: false,
 
@@ -286,8 +286,8 @@
       schema_config: {
         configs: [{
           from: '2020-10-24',
-          store: 'dynamodb',
-          object_store: 'gcs',
+          store: 'aws',
+          object_store: 'aws',
           schema: 'v11',
           index: {
             prefix: '%s_index_' % $._config.table_prefix,
